@@ -1,0 +1,11 @@
+# NB: Last matching rule takes precedence in CODEOWNERS.
+
+# Fall-through to community maintainer.
+* @summer-field @kiyo5hi
+
+# GitHub Configuration.
+.github @summer-field
+
+# Certain repo metadata files should stay as-is, particularly these.
+/LICENSE @summer-field @kiyo5hi
+/README.md @summer-field @kiyo5hi
