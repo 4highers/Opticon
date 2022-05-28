@@ -1,0 +1,12 @@
+name: YAPF Formatting Check
+on: [push]
+jobs:
+  formatting-check:
+    name: Formatting Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check if Python code is formatted
+        uses: AlexanderMelde/yapf-action@master
+        with:
+          args: --verbose
