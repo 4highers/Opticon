@@ -10,14 +10,14 @@ from configs.envs import DATABASE_URI, DEBUG
 class _Handler(object):
 
     def __init__(self):
-        self._engine = create_engine(DATABASE_URI, echo=DEBUG)
+        self.engine = create_engine(DATABASE_URI, echo=DEBUG)
         self._session_factory: Callable[..., Session] = sessionmaker(
-            bind=self._engine,
+            bind=self.engine,
             autoflush=True,
             autocommit=False,
             expire_on_commit=False,
             future=True)
-        self.BaseModel = declarative_base(bind=self._engine)  # pylint: disable=invalid-name
+        self.BaseModel = declarative_base(bind=self.engine)  # pylint: disable=invalid-name
 
     @contextmanager
     def session_scope(self) -> Generator[Session, None, None]:

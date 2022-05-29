@@ -15,7 +15,7 @@ class TestModel(db.BaseModel):
 class HandlerTest(TestCase):
 
     def test_create_and_drop_all(self):
-        inspector = inspect(db._engine)
+        inspector = inspect(db.engine)
         self.assertFalse(inspector.has_table('test_table'))
         db.create_all()
         self.assertTrue(inspector.has_table('test_table'))
@@ -26,7 +26,7 @@ class HandlerTest(TestCase):
         db.create_all()
 
         with db.session_scope() as session:
-            session.add(TestModel(name="Very Cool"))
+            session.add(TestModel(name='Very Cool'))
             session.commit()
 
         with db.session_scope() as session:
