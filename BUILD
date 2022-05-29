@@ -28,6 +28,9 @@ gazelle_python_manifest(
 )
 
 # bazelisk run //:gazelle
+# rules_python has problem parsing py_test target
+# Ref: https://github.com/bazelbuild/rules_python/issues/714
+# gazelle:exclude **/*_test.py
 gazelle(
     name = "gazelle",
     data = GAZELLE_PYTHON_RUNTIME_DEPS,
