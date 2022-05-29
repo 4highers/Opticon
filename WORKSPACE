@@ -11,17 +11,13 @@ setup_deps()
 
 ### Python ###
 load("@python_interpreter//:defs.bzl", "interpreter")
-load("@rules_python//python:pip.bzl", "pip_parse")
+load("@rules_python//python:pip.bzl", "pip_install")
 
-pip_parse(
+pip_install(
     name = "pip",
     python_interpreter_target = interpreter,
-    requirements_lock = "//:requirements.txt",
+    requirements = "//:requirements.txt",
 )
-
-load("@pip//:requirements.bzl", "install_deps")
-
-install_deps()
 
 load("@rules_python//gazelle:deps.bzl", _py_gazelle_deps = "gazelle_deps")
 
