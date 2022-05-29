@@ -1,5 +1,3 @@
-"""Creats an FastAPI instance for production/tests"""
-
 from fastapi import APIRouter, FastAPI
 
 from configs.envs import BASE_PATH, DEBUG

@@ -1,4 +1,3 @@
-"""The entrypoint of the app"""
 from multiprocessing import cpu_count
 
 from uvicorn import run
