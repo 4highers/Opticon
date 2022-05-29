@@ -7,3 +7,4 @@ PORT: int = int(environ.get('PORT', 8080))
 LOG_LEVEL: str = environ.get('LOG_LEVEL', 'INFO').upper()
 BASE_PATH: str = environ.get('BASE_PATH', '')
 DEBUG: bool = environ.get('DEBUG', None) is not None
+DATABASE_URI: str = environ.get('DATABASE_URI', 'sqlite://')
