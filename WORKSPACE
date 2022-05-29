@@ -18,7 +18,3 @@ pip_install(
     python_interpreter_target = interpreter,
     requirements = "//:requirements.txt",
 )
-
-load("@rules_python//gazelle:deps.bzl", _py_gazelle_deps = "gazelle_deps")
-
-_py_gazelle_deps()
