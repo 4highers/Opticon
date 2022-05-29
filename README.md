@@ -1,5 +1,14 @@
 # Opticon
-An optimum CMS
+
+Yet another CMS for blogging.
+
+## Quickstart
+
+Run:
+
+```shell
+bazelisk run //:Opticon_bin
+```
 
 ## Bazel Related
 

@@ -47,6 +47,34 @@ manifest:
     anyio.streams.tls: anyio
     anyio.to_process: anyio
     anyio.to_thread: anyio
+    asgiref: asgiref
+    asgiref.__init__: asgiref
+    asgiref.compatibility: asgiref
+    asgiref.current_thread_executor: asgiref
+    asgiref.local: asgiref
+    asgiref.server: asgiref
+    asgiref.sync: asgiref
+    asgiref.testing: asgiref
+    asgiref.timeout: asgiref
+    asgiref.typing: asgiref
+    asgiref.wsgi: asgiref
+    click: click
+    click.__init__: click
+    click._compat: click
+    click._termui_impl: click
+    click._textwrap: click
+    click._winconsole: click
+    click.core: click
+    click.decorators: click
+    click.exceptions: click
+    click.formatting: click
+    click.globals: click
+    click.parser: click
+    click.shell_completion: click
+    click.termui: click
+    click.testing: click
+    click.types: click
+    click.utils: click
     fastapi: fastapi
     fastapi.__init__: fastapi
     fastapi.applications: fastapi
@@ -94,6 +122,30 @@ manifest:
     fastapi.types: fastapi
     fastapi.utils: fastapi
     fastapi.websockets: fastapi
+    h11: h11
+    h11.__init__: h11
+    h11._abnf: h11
+    h11._connection: h11
+    h11._events: h11
+    h11._headers: h11
+    h11._readers: h11
+    h11._receivebuffer: h11
+    h11._state: h11
+    h11._util: h11
+    h11._version: h11
+    h11._writers: h11
+    h11.tests: h11
+    h11.tests.__init__: h11
+    h11.tests.helpers: h11
+    h11.tests.test_against_stdlib_http: h11
+    h11.tests.test_connection: h11
+    h11.tests.test_events: h11
+    h11.tests.test_headers: h11
+    h11.tests.test_helpers: h11
+    h11.tests.test_io: h11
+    h11.tests.test_receivebuffer: h11
+    h11.tests.test_state: h11
+    h11.tests.test_util: h11
     idna: idna
     idna.__init__: idna
     idna.codec: idna
@@ -173,7 +225,54 @@ manifest:
     starlette.types: starlette
     starlette.websockets: starlette
     typing_extensions: typing_extensions
+    uvicorn: uvicorn
+    uvicorn.__init__: uvicorn
+    uvicorn.__main__: uvicorn
+    uvicorn._types: uvicorn
+    uvicorn.config: uvicorn
+    uvicorn.importer: uvicorn
+    uvicorn.lifespan: uvicorn
+    uvicorn.lifespan.__init__: uvicorn
+    uvicorn.lifespan.off: uvicorn
+    uvicorn.lifespan.on: uvicorn
+    uvicorn.logging: uvicorn
+    uvicorn.loops: uvicorn
+    uvicorn.loops.__init__: uvicorn
+    uvicorn.loops.asyncio: uvicorn
+    uvicorn.loops.auto: uvicorn
+    uvicorn.loops.uvloop: uvicorn
+    uvicorn.main: uvicorn
+    uvicorn.middleware: uvicorn
+    uvicorn.middleware.__init__: uvicorn
+    uvicorn.middleware.asgi2: uvicorn
+    uvicorn.middleware.debug: uvicorn
+    uvicorn.middleware.message_logger: uvicorn
+    uvicorn.middleware.proxy_headers: uvicorn
+    uvicorn.middleware.wsgi: uvicorn
+    uvicorn.protocols: uvicorn
+    uvicorn.protocols.__init__: uvicorn
+    uvicorn.protocols.http: uvicorn
+    uvicorn.protocols.http.__init__: uvicorn
+    uvicorn.protocols.http.auto: uvicorn
+    uvicorn.protocols.http.flow_control: uvicorn
+    uvicorn.protocols.http.h11_impl: uvicorn
+    uvicorn.protocols.http.httptools_impl: uvicorn
+    uvicorn.protocols.utils: uvicorn
+    uvicorn.protocols.websockets: uvicorn
+    uvicorn.protocols.websockets.__init__: uvicorn
+    uvicorn.protocols.websockets.auto: uvicorn
+    uvicorn.protocols.websockets.websockets_impl: uvicorn
+    uvicorn.protocols.websockets.wsproto_impl: uvicorn
+    uvicorn.server: uvicorn
+    uvicorn.subprocess: uvicorn
+    uvicorn.supervisors: uvicorn
+    uvicorn.supervisors.__init__: uvicorn
+    uvicorn.supervisors.basereload: uvicorn
+    uvicorn.supervisors.multiprocess: uvicorn
+    uvicorn.supervisors.statreload: uvicorn
+    uvicorn.supervisors.watchgodreload: uvicorn
+    uvicorn.workers: uvicorn
   pip_repository:
     name: pip
     incremental: false
-integrity: 0b7dd24f836ba318be0347aedced16e28bbeb5c72e93dcd7d4eaaa61760b1c9b
+integrity: 8a547314e47d1f15ca6b69959c3760f70e6774158980aa658fad454480cedc2e
