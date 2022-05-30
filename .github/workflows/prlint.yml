@@ -16,7 +16,7 @@ jobs:
           on-failed-regex-request-changes: false
           on-failed-regex-create-review: true
           on-failed-regex-comment:
-            "Failed regex: `%regex%`!"
+            "Failed regex: `%regex%`! correct format: xxx(xxx): xxx"
           on-succeeded-regex-dismiss-review-comment:
             "Success!"
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
