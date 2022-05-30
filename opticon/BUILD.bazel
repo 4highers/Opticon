@@ -1,0 +1,26 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+py_library(
+    name = "opticon",
+    srcs = ["app.py"],
+    imports = [".."],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//opticon/configs",
+        "//opticon/healthz",
+        "@pip//pypi__fastapi",
+    ],
+)
+
+py_binary(
+    name = "opticon_bin",
+    srcs = ["__main__.py"],
+    imports = [".."],
+    main = "__main__.py",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        ":opticon",
+        "//opticon/configs",
+        "@pip//pypi__uvicorn",
+    ],
+)

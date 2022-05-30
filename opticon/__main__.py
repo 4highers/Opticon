@@ -2,7 +2,7 @@ from multiprocessing import cpu_count
 
 from uvicorn import run
 
-from configs.envs import DEBUG, HOST, LOG_LEVEL, PORT
+from opticon.configs.envs import DEBUG, HOST, LOG_LEVEL, PORT
 
 if __name__ == '__main__':
     run('app:create_app',

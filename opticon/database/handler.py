@@ -4,7 +4,7 @@ from typing import Callable, Dict, Generator
 from sqlalchemy import MetaData, create_engine
 from sqlalchemy.orm import sessionmaker, Session, declarative_base
 
-from configs.envs import DATABASE_URI, DEBUG
+from opticon.configs.envs import DATABASE_URI, DEBUG
 
 
 class _Handler(object):

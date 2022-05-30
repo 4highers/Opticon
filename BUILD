@@ -1,4 +1,3 @@
-load("@rules_python//python:defs.bzl", "py_binary", "py_library")
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
 load("@bazel_gazelle//:def.bzl", "gazelle")
 load("@rules_python//gazelle:def.bzl", "GAZELLE_PYTHON_RUNTIME_DEPS")
@@ -35,27 +34,4 @@ gazelle(
     name = "gazelle",
     data = GAZELLE_PYTHON_RUNTIME_DEPS,
     gazelle = "@rules_python//gazelle:gazelle_python_binary",
-)
-
-py_library(
-    name = "Opticon",
-    srcs = ["app.py"],
-    visibility = ["//:__subpackages__"],
-    deps = [
-        "//configs",
-        "//healthz",
-        "@pip//pypi__fastapi",
-    ],
-)
-
-py_binary(
-    name = "Opticon_bin",
-    srcs = ["__main__.py"],
-    main = "__main__.py",
-    visibility = ["//:__subpackages__"],
-    deps = [
-        ":Opticon",
-        "//configs",
-        "@pip//pypi__uvicorn",
-    ],
 )

@@ -2,7 +2,7 @@ from unittest import main, TestCase
 
 from sqlalchemy import Column, Integer, String, select, inspect
 
-from database.handler import db
+from opticon.database.handler import db
 
 
 class TestModel(db.BaseModel):

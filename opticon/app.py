@@ -1,7 +1,7 @@
 from fastapi import APIRouter, FastAPI
 
-from configs.envs import BASE_PATH, DEBUG
-from healthz.routers import healthz_router
+from opticon.configs.envs import BASE_PATH, DEBUG
+from opticon.healthz.routers import healthz_router
 
 
 def create_app() -> FastAPI:
