@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: morrisoncole/pr-lint-action@v1.6.1
         with:
-          title-regex: "[a-z]{1,10}\([a-z]{1,10}\)\: .{1,30}"
+          title-regex: "[a-z]{1,10}\(([a-z]{1,10}|\*)\):\s[^\.]{1,50}"
           on-failed-regex-fail-action: false
           on-failed-regex-request-changes: false
           on-failed-regex-create-review: true
