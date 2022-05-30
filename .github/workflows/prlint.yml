@@ -1,0 +1,22 @@
+name: PR Lint
+
+on:
+  pull_request:
+    # possible values: https://help.github.com/en/actions/reference/events-that-trigger-workflows#pull-request-event-pull_request
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  pr-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: morrisoncole/pr-lint-action@v1.6.1
+        with:
+          title-regex: "[a-z]{1,10}\([a-z]{1,10}\)\: .{1,30}"
+          on-failed-regex-fail-action: false
+          on-failed-regex-request-changes: false
+          on-failed-regex-create-review: true
+          on-failed-regex-comment:
+            "Failed regex: `%regex%`!"
+          on-succeeded-regex-dismiss-review-comment:
+            "Success!"
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
