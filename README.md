@@ -30,3 +30,12 @@ To test any target:
 ```shell
 bazelisk test //path/to:target
 ```
+
+## Migrations
+
+Everytime a change is made to the database, do the migration.
+
+1. Go to `alembic/env.py`, import the Model
+2. Run `alembic --config alembic/alembic.ini revision --autogenerate -m <some messages>`
+
+TODO(Kiyo5hi): Bazelize this process.
