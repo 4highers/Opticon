@@ -1,5 +1,3 @@
-"""Place to keep environment variables."""
-
 from os import environ
 
 HOST: str = environ.get('HOST', '0.0.0.0')
