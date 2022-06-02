@@ -1,10 +1,40 @@
+from re import compile as compile_regex
+
 from contextlib import contextmanager
 from typing import Callable, Dict, Generator
 
-from sqlalchemy import MetaData, create_engine
-from sqlalchemy.orm import sessionmaker, Session, declarative_base
+from sqlalchemy import MetaData, create_engine, Column, Integer
+from sqlalchemy.orm import sessionmaker, Session, declarative_base, as_declarative, declared_attr
 
 from opticon.configs.envs import DATABASE_URI, DEBUG
+
+_TO_SNAKE_CASE = compile_regex(r'(?<!^)(?=[A-Z])')
+
+
+@as_declarative()
+class _BaseModel(object):
+
+    __comment__: str
+    __extra_args__: tuple = tuple()
+
+    @classmethod
+    @declared_attr
+    def __tablename__(cls):
+        return _TO_SNAKE_CASE.sub('_', cls.__name__).lower()
+
+    @classmethod
+    @declared_attr
+    def __table_args__(cls):
+        return (*cls.__extra_args__, {
+            'comment': cls.__comment__,
+            'mysql_engine': 'innodb',
+            'mysql_charset': 'utf8mb4',
+        })
+
+    id = Column(Integer,
+                primary_key=True,
+                autoincrement=True,
+                comment='Auto-incremented ID.')
 
 
 class _Handler(object):
@@ -17,7 +47,7 @@ class _Handler(object):
             autocommit=False,
             expire_on_commit=False,
             future=True)
-        self.BaseModel = declarative_base(bind=self.engine)  # pylint: disable=invalid-name
+        self.BaseModel = declarative_base(bind=self.engine, cls=_BaseModel)  # pylint:disable=invalid-name
 
     @contextmanager
     def session_scope(self) -> Generator[Session, None, None]:

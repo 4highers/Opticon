@@ -1,26 +1,35 @@
 from unittest import main, TestCase
 
-from sqlalchemy import Column, Integer, String, select, inspect
+from sqlalchemy import Column, String, select, inspect
 
 from opticon.database.handler import db
 
 
 class TestModel(db.BaseModel):
-    __tablename__ = 'test_table'
-    __table_args__ = db.default_table_args('Test table.')
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    __comment__ = 'Test table.'
     name = Column(String(8))
+
+
+class ModelTest(TestCase):
+
+    def test_table_args(self):
+        self.assertDictEqual(
+            {
+                'comment': 'Test table.',
+                'mysql_engine': 'innodb',
+                'mysql_charset': 'utf8mb4',
+            }, TestModel.__table_args__[0])
 
 
 class HandlerTest(TestCase):
 
     def test_create_and_drop_all(self):
         inspector = inspect(db.engine)
-        self.assertFalse(inspector.has_table('test_table'))
+        self.assertFalse(inspector.has_table('test_model'))
         db.create_all()
-        self.assertTrue(inspector.has_table('test_table'))
+        self.assertTrue(inspector.has_table('test_model'))
         db.drop_all()
-        self.assertFalse(inspector.has_table('test_table'))
+        self.assertFalse(inspector.has_table('test_model'))
 
     def test_add(self):
         db.create_all()

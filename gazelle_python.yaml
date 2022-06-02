@@ -5,6 +5,80 @@
 
 manifest:
   modules_mapping:
+    alembic: alembic
+    alembic.__init__: alembic
+    alembic.__main__: alembic
+    alembic.autogenerate: alembic
+    alembic.autogenerate.__init__: alembic
+    alembic.autogenerate.api: alembic
+    alembic.autogenerate.compare: alembic
+    alembic.autogenerate.render: alembic
+    alembic.autogenerate.rewriter: alembic
+    alembic.command: alembic
+    alembic.config: alembic
+    alembic.context: alembic
+    alembic.ddl: alembic
+    alembic.ddl.__init__: alembic
+    alembic.ddl.base: alembic
+    alembic.ddl.impl: alembic
+    alembic.ddl.mssql: alembic
+    alembic.ddl.mysql: alembic
+    alembic.ddl.oracle: alembic
+    alembic.ddl.postgresql: alembic
+    alembic.ddl.sqlite: alembic
+    alembic.environment: alembic
+    alembic.migration: alembic
+    alembic.op: alembic
+    alembic.operations: alembic
+    alembic.operations.__init__: alembic
+    alembic.operations.base: alembic
+    alembic.operations.batch: alembic
+    alembic.operations.ops: alembic
+    alembic.operations.schemaobj: alembic
+    alembic.operations.toimpl: alembic
+    alembic.runtime: alembic
+    alembic.runtime.__init__: alembic
+    alembic.runtime.environment: alembic
+    alembic.runtime.migration: alembic
+    alembic.script: alembic
+    alembic.script.__init__: alembic
+    alembic.script.base: alembic
+    alembic.script.revision: alembic
+    alembic.script.write_hooks: alembic
+    alembic.templates.async.env: alembic
+    alembic.templates.generic.env: alembic
+    alembic.templates.multidb.env: alembic
+    alembic.testing: alembic
+    alembic.testing.__init__: alembic
+    alembic.testing.assertions: alembic
+    alembic.testing.env: alembic
+    alembic.testing.fixtures: alembic
+    alembic.testing.plugin: alembic
+    alembic.testing.plugin.__init__: alembic
+    alembic.testing.plugin.bootstrap: alembic
+    alembic.testing.requirements: alembic
+    alembic.testing.schemacompare: alembic
+    alembic.testing.suite: alembic
+    alembic.testing.suite.__init__: alembic
+    alembic.testing.suite._autogen_fixtures: alembic
+    alembic.testing.suite.test_autogen_comments: alembic
+    alembic.testing.suite.test_autogen_computed: alembic
+    alembic.testing.suite.test_autogen_diffs: alembic
+    alembic.testing.suite.test_autogen_fks: alembic
+    alembic.testing.suite.test_autogen_identity: alembic
+    alembic.testing.suite.test_environment: alembic
+    alembic.testing.suite.test_op: alembic
+    alembic.testing.util: alembic
+    alembic.testing.warnings: alembic
+    alembic.util: alembic
+    alembic.util.__init__: alembic
+    alembic.util.compat: alembic
+    alembic.util.editor: alembic
+    alembic.util.exc: alembic
+    alembic.util.langhelpers: alembic
+    alembic.util.messaging: alembic
+    alembic.util.pyfiles: alembic
+    alembic.util.sqla_compat: alembic
     anyio: anyio
     anyio.__init__: anyio
     anyio._backends: anyio
@@ -175,6 +249,46 @@ manifest:
     idna.intranges: idna
     idna.package_data: idna
     idna.uts46data: idna
+    mako: Mako
+    mako.__init__: Mako
+    mako._ast_util: Mako
+    mako.ast: Mako
+    mako.cache: Mako
+    mako.cmd: Mako
+    mako.codegen: Mako
+    mako.compat: Mako
+    mako.exceptions: Mako
+    mako.ext: Mako
+    mako.ext.__init__: Mako
+    mako.ext.autohandler: Mako
+    mako.ext.babelplugin: Mako
+    mako.ext.beaker_cache: Mako
+    mako.ext.extract: Mako
+    mako.ext.linguaplugin: Mako
+    mako.ext.preprocessors: Mako
+    mako.ext.pygmentplugin: Mako
+    mako.ext.turbogears: Mako
+    mako.filters: Mako
+    mako.lexer: Mako
+    mako.lookup: Mako
+    mako.parsetree: Mako
+    mako.pygen: Mako
+    mako.pyparser: Mako
+    mako.runtime: Mako
+    mako.template: Mako
+    mako.testing: Mako
+    mako.testing.__init__: Mako
+    mako.testing._config: Mako
+    mako.testing.assertions: Mako
+    mako.testing.config: Mako
+    mako.testing.exclusions: Mako
+    mako.testing.fixtures: Mako
+    mako.testing.helpers: Mako
+    mako.util: Mako
+    markupsafe: MarkupSafe
+    markupsafe.__init__: MarkupSafe
+    markupsafe._native: MarkupSafe
+    markupsafe._speedups: MarkupSafe
     pydantic: pydantic
     pydantic.__init__: pydantic
     pydantic._hypothesis_plugin: pydantic
@@ -202,6 +316,26 @@ manifest:
     pydantic.utils: pydantic
     pydantic.validators: pydantic
     pydantic.version: pydantic
+    pymysql: PyMySQL
+    pymysql.__init__: PyMySQL
+    pymysql._auth: PyMySQL
+    pymysql.charset: PyMySQL
+    pymysql.connections: PyMySQL
+    pymysql.constants: PyMySQL
+    pymysql.constants.__init__: PyMySQL
+    pymysql.constants.CLIENT: PyMySQL
+    pymysql.constants.COMMAND: PyMySQL
+    pymysql.constants.CR: PyMySQL
+    pymysql.constants.ER: PyMySQL
+    pymysql.constants.FIELD_TYPE: PyMySQL
+    pymysql.constants.FLAG: PyMySQL
+    pymysql.constants.SERVER_STATUS: PyMySQL
+    pymysql.converters: PyMySQL
+    pymysql.cursors: PyMySQL
+    pymysql.err: PyMySQL
+    pymysql.optionfile: PyMySQL
+    pymysql.protocol: PyMySQL
+    pymysql.times: PyMySQL
     sniffio: sniffio
     sniffio.__init__: sniffio
     sniffio._impl: sniffio
@@ -562,4 +696,4 @@ manifest:
   pip_repository:
     name: pip
     incremental: false
-integrity: 5594f54e53836909c3699c30c4473ed6b6f2a8527a20dd73bdf135c289c86361
+integrity: aec88ace583827326c0d5490c1bc063c2a71998a883f80c1efb994630207d628

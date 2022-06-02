@@ -13,6 +13,7 @@ py_library(
 
 py_test(
     name = "handler_test",
+    size = "small",
     srcs = ["handler_test.py"],
     deps = [":database"],
 )
