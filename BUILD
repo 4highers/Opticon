@@ -9,7 +9,10 @@ load("@rules_python//gazelle/modules_mapping:def.bzl", "modules_mapping")
 # bazelisk test //:requirements_test
 compile_pip_requirements(
     name = "requirements",
-    extra_args = ["--allow-unsafe"],
+    extra_args = [
+        "--allow-unsafe",
+        "--quiet",
+    ],
 )
 
 modules_mapping(
